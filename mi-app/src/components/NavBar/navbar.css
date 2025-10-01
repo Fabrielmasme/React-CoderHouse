@@ -1,0 +1,31 @@
+.NavBar {
+width: 100%;
+  background-color: rgb(33, 49, 30);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+}
+
+.menu li {
+  cursor: pointer;
+}
+
+.CardWidget img {
+  width: 40px;
+  height: 40px;
+}
