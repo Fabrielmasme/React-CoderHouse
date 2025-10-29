@@ -1,31 +1,91 @@
-.NavBar {
-width: 100%;
-  background-color: rgb(33, 49, 30);
+.navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin: 10px;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  font-size: 16px;
-}
-
-.menu li {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease;
   cursor: pointer;
 }
 
-.CardWidget img {
-  width: 40px;
-  height: 40px;
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.categories {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categories li {
+  position: relative;
+}
+
+.categories a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.categories a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.categories a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: transform 0.3s ease;
+}
+
+.categories a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .categories {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .categories a {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .logo {
+    height: 40px;
+  }
 }

@@ -1,19 +1,24 @@
-import proteina from "./assets/img/Whey_protein_frutilla_doypack.png"
 import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
-import ItemListContainer from "./components/ItemsListContainer/ItemListContainer";
-import EjemploContador from "./components/EjemploContador/EjemploContador";
 
 function App() {
+
   return (
-    <div className="App">
-      <NavBar />
-      <main> 
-        <ItemListContainer greeting={ "Bienvenidos a mi primer E-commerce"} />
-        <p>Mi primer app con Vite y React</p>
-        <img src={proteina} alt="Proteina" className="imagen-principal" />
-        <EjemploContador />
-      </main>  
+    <div className="app">
+      <BrowserRouter>
+        <NavBar />
+
+        <Routes>
+          <Route path="/" element={ <ItemListContainer greeting={"Hola acá podes comprar suplementos"} /> } />
+          <Route path="/category/:category" element={ <ItemListContainer greeting={"Hola acá podes comprar suplementos"} /> } />
+          <Route path="/detail/:id" element={ <ItemDetailContainer /> } />
+          <Route path="*" element={ <div>Error 404</div> } />
+        </Routes>
+
+      </BrowserRouter>
     </div>
   )
 }
