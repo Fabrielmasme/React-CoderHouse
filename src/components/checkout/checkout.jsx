@@ -3,6 +3,7 @@ import { CartContext } from "../Context/CartContext";
 import {  addDoc, collection } from "firebase/firestore";
 import db  from "../../data/db";
 import FormCheckout from "../FormCheckout/FormCheckout";
+import "./checkout.css";
 
 const Checkout = () => { 
     const [dataForm, setDataForm] = useState({
@@ -45,13 +46,15 @@ const Checkout = () => {
         <div>
             {
                 orderId ? (
-                    <div>
-                        <h2> Orden generada correctamente </h2>
-                        <p> Su número de orden es : {orderId} </p>
+                    <div className="order-success">
+                        <h2>Orden generada correctamente</h2>
+                        <p>Su número de orden es: <span className="order-id">{orderId}</span></p>
                     </div>
                 ) : (
                     <FormCheckout 
-                        dataForm={dataForm} handleChangeInput={handleChangeInput} sendOrder={sendOrder}
+                        dataForm={dataForm} 
+                        handleChangeInput={handleChangeInput} 
+                        sendOrder={sendOrder}
                     />
                 )
             }          

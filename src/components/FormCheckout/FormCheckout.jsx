@@ -2,35 +2,33 @@ import { useContext, useState } from "react";
 import { CartContext } from "../Context/CartContext";   
 import {  addDoc, collection } from "firebase/firestore";
 import db  from "../../data/db";
-
+import "./FormCheckout.css";
 
 const FormCheckout = ( {dataForm, handleChangeInput, sendOrder} ) => {
     return(
-        <form onSubmit={sendOrder}>
+        <form className="checkout-form" onSubmit={sendOrder}>
             <input 
                 type="text" 
                 name="fullname" 
                 value={dataForm.fullname} 
                 onChange={handleChangeInput}
-                placeholder=" Ingrese su nombre"
+                placeholder="Ingrese su nombre"
             />
             <input 
                 type="tel" 
                 name="phone" 
                 value={dataForm.phone} 
                 onChange={handleChangeInput}
-                placeholder=" Ingrese su telefono"
-
+                placeholder="Ingrese su teléfono"
             />
             <input 
                 type="email" 
                 name="email" 
                 value={dataForm.email} 
                 onChange={handleChangeInput}
-                placeholder=" Ingrese su correo"
-
+                placeholder="Ingrese su correo"
             />
-            <button type="submit" >Enviar Orden</button>
+            <button type="submit">Enviar Orden</button>
         </form>
     )
 }
