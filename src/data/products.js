@@ -4,7 +4,7 @@ const products = [
     name: "Creatina Monohidrato",
     description: "Creatina pura micronizada 300g",
     stock: 15,
-    image: "/public/image/Creatina300g.webp",
+    image: "/image/Creatina300g.webp",
     price: 450,
     category: "creatinas"
   },
@@ -13,7 +13,7 @@ const products = [
     name: "Creatina HCL",
     description: "Creatina HCL de rápida absorción 200g",
     stock: 8,
-    image: "/public/image/CreatinaPack300g.webp",
+    image: "/image/CreatinaPack300g.webp",
     price: 680,
     category: "creatinas"
   },
@@ -22,7 +22,7 @@ const products = [
     name: "Creatina Alcalina",
     description: "Creatina Kre-Alkalyn 120 cápsulas",
     stock: 12,
-    image: "/public/image/ImpactCreatineMyProtein.webp",
+    image: "/image/ImpactCreatineMyProtein.webp",
     price: 590,
     category: "creatinas"
   },
@@ -31,7 +31,7 @@ const products = [
     name: "Pancake Mix Proteico",
     description: "Mix para pancakes sabor vainilla 500g",
     stock: 20,
-    image: "/public/image/PancakesProteicosGrangerChocolate.webp",
+    image: "/image/PancakesProteicosGrangerChocolate.webp",
     price: 380,
     category: "pancakes"
   },
@@ -40,7 +40,7 @@ const products = [
     name: "Pancake Mix Chocolate",
     description: "Mix para pancakes sabor chocolate 500g",
     stock: 18,
-    image: "/public/image/PancakesProteicosGrangerVainilla.webp",
+    image: "/image/PancakesProteicosGrangerVainilla.webp",
     price: 380,
     category: "pancakes"
   },
@@ -49,7 +49,7 @@ const products = [
     name: "Proteína Whey",
     description: "Proteína Whey concentrada sabor chocolate 1kg",
     stock: 25,
-    image: "/public/image/ProteinaOneFitClassic.png",
+    image: "/image/ProteinaOneFitClassic.png",
     price: 890,
     category: "proteinas"
   },
@@ -58,7 +58,7 @@ const products = [
     name: "Proteína Isolate",
     description: "Proteína Whey aislada sabor vainilla 1kg",
     stock: 16,
-    image: "/public/image/ProteinaStarNutrion908gChocolate.webp",
+    image: "/image/ProteinaStarNutrion908gChocolate.webp",
     price: 1250,
     category: "proteinas"
   },
@@ -67,7 +67,7 @@ const products = [
     name: "Proteína Vegana",
     description: "Proteína de arveja y arroz sabor frutilla 900g",
     stock: 10,
-    image: "/public/image/ProteinaStarNutrion908gVainilla.webp",
+    image: "/image/ProteinaStarNutrion908gVainilla.webp",
     price: 980,
     category: "proteinas"
   },
@@ -76,7 +76,7 @@ const products = [
     name: "Proteína Caseína",
     description: "Caseína micelar sabor cookies 1kg",
     stock: 14,
-    image: "/public/image/Whey_protein_frutilla_doypack.png",
+    image: "/image/Whey_protein_frutilla_doypack.png",
     price: 1150,
     category: "proteinas"
   }
